@@ -22,4 +22,8 @@ app.get('/users/:id', (req, res) => {
     res.status(200).send('Detalles del usuario ' + req.params.id);
 });
 
+app.post('/users', (req, res) => {
+    res.status(200).send('Voy a crear un usuario');
+});
+
 module.exports = app;
