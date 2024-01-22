@@ -1,5 +1,10 @@
+const { Router } = require('express');
 
+const mainRouter = Router();
 
+module.exports = mainRouter;
+
+/*
 app.get('/', (req, res) => {
     res.status(200).send('Ok!');
 });
@@ -23,3 +28,4 @@ app.get('/posts', (req, res) => {
 app.get('/posts/:id', (req, res) => {
     res.status(200).send('Detalles del post ' + req.params.id);
 });
+*/
