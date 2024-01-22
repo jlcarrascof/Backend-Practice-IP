@@ -30,4 +30,8 @@ app.get('/posts', (req, res) => {
     res.status(200).send('Estoy en posts');
 });
 
+app.get('/posts/:id', (req, res) => {
+    res.status(200).send('Detalles del post ' + req.params.id);
+});
+
 module.exports = app;
