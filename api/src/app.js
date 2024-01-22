@@ -26,4 +26,8 @@ app.post('/users', (req, res) => {
     res.status(200).send('Voy a crear un usuario');
 });
 
+app.get('/posts', (req, res) => {
+    res.status(200).send('Estoy en posts');
+});
+
 module.exports = app;
