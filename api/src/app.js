@@ -14,4 +14,8 @@ app.get('/', (req, res) => {
     res.status(200).send('Ok!');
 });
 
+app.get('/users', (req, res) => {
+    res.status(200).send('Estoy en /users');
+});
+
 module.exports = app;
