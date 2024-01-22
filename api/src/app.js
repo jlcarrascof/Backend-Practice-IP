@@ -18,4 +18,8 @@ app.get('/users', (req, res) => {
     res.status(200).send('Estoy en /users');
 });
 
+app.get('/users/:id', (req, res) => {
+    res.status(200).send('Detalles del usuario ' + req.params.id);
+});
+
 module.exports = app;
