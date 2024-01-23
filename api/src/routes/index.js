@@ -1,4 +1,6 @@
 const { Router } = require('express');
+const usersRouter = require('./usersRouter');
+const postsRouter = require('./postsRouter');
 
 const mainRouter = Router();
 
@@ -6,16 +8,7 @@ mainRouter.get('/', (req, res) => {
     res.status(200).send('Ok!');
 });
 
-mainRouter.use('/users', require('./usersRouter'));
-
-/*
-mainRouter.get('/posts', (req, res) => {
-    res.status(200).send('Estoy en posts');
-});
-
-mainRouter.get('/posts/:id', (req, res) => {
-    res.status(200).send('Detalles del post ' + req.params.id);
-});
-*/
+mainRouter.use('/users', usersRouter);
+mainRouter.use('/posts', postsRouter );
 
 module.exports = mainRouter;
