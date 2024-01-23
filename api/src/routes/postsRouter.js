@@ -3,11 +3,11 @@ const { Router } = require('express');
 const postsRouter = Router();
 
 postsRouter.get('/', (req, res) => {
-    res.status(200).send('Estoy en /posts');
+    res.send('NIY: ESTA RUTA TRAE LA INFO DE TODOS LOS POSTS');
 });
 
 postsRouter.get('/:id', (req, res) => {
-    res.status(200).send('Detalles del post ' + req.params.id);
+    res.send('NIY: ESTA RUTA TRAE LA INFO DE UN POST DETERMINADO POR ID ' + req.params.id);
 });
 
 module.exports = postsRouter;
