@@ -4,7 +4,8 @@ const getUsersHandler = (req, res) => {
     // Unir los datos, unificando el formato.
     // cuando tenga los datos, responder con los datos.
     const { name } = req.query;
-    res.send(name);              
+    if (name) res.send(`Quiero buscar usuarios con el nombre: ${name}`)
+    else res.send('Quiero buscar todos los usuarios');       
 }
 
 const getUserHandler = (req, res) => {
