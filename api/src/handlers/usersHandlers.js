@@ -14,7 +14,11 @@ const getUserHandler = (req, res) => {
 }    
 
 const createUserHandler = (req, res) => {
-    res.send('NIY: ESTA RUTA CREA UN NUEVO USUARIO');
+    const { name, email, phone } = req.body;
+    res.send(`Estoy por crear un usuario con estos datos:
+    Name: ${name}, 
+    Email: ${email}, 
+    Phone: ${phone}`);
 }
 
 module.exports = {
